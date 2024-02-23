@@ -19,7 +19,9 @@
   <body>
     <div class="nav">
       <img src="./imgs/logo.svg" alt="kitted house" />
-      <a href="" target="_blank">Get a Quote</a>
+      <a href="https://forms.gle/JZFF9xgFmSEenpwGA" target="_blank"
+        >Get a Quote</a
+      >
     </div>
 
     <div class="container">
@@ -34,25 +36,121 @@
           solutions.</p
         >
         <div class="hero-cta">
-          <a class="btn-primary" href="">Get a Quote</a>
-          <a class="btn-outline" href="">Watch a Demo</a>
+          <a
+            class="btn-primary"
+            target="_blank"
+            href="https://forms.gle/JZFF9xgFmSEenpwGA"
+            >Get a Quote</a
+          >
+          <a class="btn-outline" href="#demo" onclick="openModal()"
+            >Watch a Demo
+            <img class="btn-icon" src="./imgs/play-circle.svg" alt=""
+          /></a>
         </div>
       </div>
 
       <div class="intro">
-        <h2>Top Experts in Greater Vancouver</h2>
+        <img src="./imgs/electrician.png" alt="" />
+        <div class="copy">
+          <h2>Top Experts in British Columbia</h2>
+          <p
+            >At Kitted, we pride ourselves for being the top home automation
+            consultant, designer and installer in the BC. Our specialists would
+            love working with you to figure out a smart home solution that's
+            customized for your specific needs and give you a top notch service
+            you can find nowhere else.</p
+          >
+        </div>
+      </div>
+
+      <div class="services">
+        <h2>What We Do</h2>
         <p
-          >If you're thinking about giving your home a new life with smart
-          appliances and fixtures, you're in the right place!</p
+          >We provide home automation service including but not limited to the
+          following.</p
         >
-        <p
-          >At Kitted, we pride ourselves for being the top smart home
-          consultant, designer and installer in the GVA. Our specialists love
-          working with you to figure out a smart home solution that's customized
-          for your specific needs and give you a topnotch service you can find
-          nowhere else.</p
-        >
+        <div class="service-items">
+          <div class="service-card">
+            <img src="./imgs/icons8-rgb-lamp-96.png" alt="" />
+            <h3>Smart Lighting Solutions</h3>
+            <p>
+              Our smart lighting solutions bring convenience and ambiance to
+              every corner. Effortlessly control brightness, color, and ambiance
+              with just a tap on your phone or a voice command.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <img src="./imgs/icons8-3d-glasses-96.png" alt="" />
+            <h3>Home Theatre Experience</h3>
+            <p>
+              Our home theatre solutions redefine entertainment, delivering
+              stunning visuals and captivating sound. From installation to
+              optimization, we tailor every detail to suit your preferences.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <img src="./imgs/icons8-coffee-machine-96.png" alt="" />
+            <h3>Smart Appliances Integration</h3>
+            <p>
+              From smart refrigerators that manage groceries to automated coffee
+              makers brewing your perfect cup, experience the future of home
+              living today.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <img src="./imgs/icons8-cctv-96.png" alt="" />
+            <h3>Home Surveillance Systems</h3>
+            <p>
+              Monitor your property in real-time from anywhere, ensuring peace
+              of mind whether you're at home or away. Our customizable solutions
+              offer comprehensive coverage, deterring threats and providing
+              evidence when needed.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-overlay">
+        <div id="modal-content">
+          <video id="modal-video" controls>
+            <source src="./imgs/home.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
+    <script>
+      function openModal() {
+        // Get modal elements
+        var modalOverlay = document.getElementById("modal-overlay");
+        var modalVideo = document.getElementById("modal-video");
+
+        // Show modal
+        modalOverlay.style.display = "flex";
+        modalVideo.style.display = "block";
+
+        // You can also set the video source dynamically using JavaScript if needed
+        // modalVideo.src = 'your-video.mp4';
+      }
+
+      // Close modal when clicking outside the video
+
+      function handleWindowClick(event) {
+        var modalOverlay = document.getElementById("modal-overlay");
+        var modalVideo = document.getElementById("modal-video");
+
+        if (event.target == modalOverlay) {
+          modalOverlay.style.display = "none";
+          modalVideo.style.display = "none";
+          modalVideo.pause();
+        }
+      }
+      window.onclick = handleWindowClick;
+
+      window.ontouchend = handleWindowClick;
+    </script>
   </body>
 </html>

@@ -17,7 +17,7 @@ body {
   margin: 0 auto;
   box-shadow: 0px 0px 10px #00000029;
   height: 50px;
-  width: 80%;
+  width: 85%;
   padding: 10px 15px;
   border-radius: 60px;
   display: flex;
@@ -26,6 +26,7 @@ body {
   max-width: 850px;
   position: fixed;
   background-color: white;
+  z-index: 100;
 }
 
 .nav img {
@@ -81,11 +82,16 @@ body {
   color: black;
   width: fit-content;
   border: 1px solid black;
+  gap: 5px;
 }
 
 .btn-outline:hover {
   background-color: #c9c9c9;
   cursor: pointer;
+}
+
+.btn-icon {
+  width: 18px !important;
 }
 
 .container {
@@ -119,6 +125,76 @@ a {
   font-size: 18px;
 }
 
+.intro {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.intro img {
+  flex: 1;
+  width: 100%;
+  object-fit: contain;
+  min-width: 300px;
+}
+
+.intro .copy {
+  flex: 1;
+}
+
+.service-card {
+  box-shadow: 0px 0px 10px #00000029;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  max-width: 400px;
+  position: relative;
+  margin-top: 70px;
+}
+
+.service-card img {
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  position: absolute;
+  top: -60px;
+  width: 65px;
+  padding: 10px;
+}
+
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Hide video initially */
+#modal-video {
+  display: none;
+  width: 100%;
+  height: auto;
+}
 @media only screen and (max-width: 600px) {
   .hero h1 {
     font-size: 48px;
