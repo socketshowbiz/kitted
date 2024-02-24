@@ -103,7 +103,6 @@ body {
 
 .hero {
   text-align: center;
-  padding-top: 100px;
 }
 .hero img {
   width: 100%;
@@ -114,9 +113,10 @@ body {
   font-size: 72px;
   font-weight: 500;
   color: #20123a;
+  margin: 0;
 }
 
-p {
+p li {
   font-size: 18px;
   line-height: 1.6;
 }
@@ -194,6 +194,57 @@ a {
   display: none;
   width: 100%;
   height: auto;
+}
+
+section {
+  padding-top: 100px;
+}
+
+.platforms h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+}
+.companies {
+  display: flex;
+  justify-content: space-around;
+}
+
+.companies img {
+  height: 50px;
+  filter: grayscale();
+}
+
+details {
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 15px;
+  padding: 25px 10px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+summary {
+  box-sizing: border-box;
+}
+
+footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 13px;
+  color: #a2a2a2;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 @media only screen and (max-width: 600px) {
   .hero h1 {
